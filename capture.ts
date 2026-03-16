@@ -23,4 +23,5 @@ try {
   process.exit(1)
 } finally {
   ringApi.disconnect()
+  process.exit(0)
 }
