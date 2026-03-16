@@ -1,0 +1,12 @@
+{
+  "name": "parking-spy",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "capture": "bun run capture.ts",
+    "notify": "bun run notify.ts"
+  },
+  "dependencies": {
+    "ring-client-api": "^14.3.0"
+  }
+}
