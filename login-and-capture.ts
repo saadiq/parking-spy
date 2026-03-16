@@ -59,6 +59,9 @@ try {
   } finally {
     ringApi.disconnect()
   }
+} catch (err) {
+  console.error("Login failed:", err)
+  process.exit(1)
 } finally {
   rl.close()
 }

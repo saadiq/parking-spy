@@ -10,6 +10,7 @@ try {
   }
 } catch (err) {
   console.error("Auth failed:", err)
+  process.exit(1)
 } finally {
   ringApi.disconnect()
 }

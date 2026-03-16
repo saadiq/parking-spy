@@ -33,5 +33,10 @@ export function createRingClient(): RingApi {
 }
 
 export function findFrontCamera(cameras: RingCamera[]): RingCamera {
-  return cameras.find((c) => c.name.toLowerCase().includes(CAMERA_NAME)) ?? cameras[0]
+  const camera = cameras.find((c) => c.name.toLowerCase().includes(CAMERA_NAME))
+  if (!camera) {
+    console.warn(`Camera "${CAMERA_NAME}" not found, falling back to: ${cameras[0].name}`)
+    return cameras[0]
+  }
+  return camera
 }
